@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Redirección</title>
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const peticion = params.get("Peticion");
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const peticion = params.get("Peticion");
 
-        if (peticion) {
-            fetch("https://encuesta-mntopucp.app.n8n.cloud/webhook/query-string?Peticion=" + peticion)
-                .catch(() => {});
-        }
+    if (peticion) {
+        const img = new Image();
+        img.src = "https://encuesta-mntopucp.app.n8n.cloud/webhook/query-string?Peticion=" + peticion;
+    }
 
-        setTimeout(() => {
-            window.location.href = "https://www.pucp.edu.pe";
-        }, 2000);
-    </script>
-</head>
-<body>
-    <p>Redirigiendo...</p>
-</body>
-</html>
+    setTimeout(() => {
+        window.location.href = "https://www.pucp.edu.pe";
+    }, 1000);
+</script>
