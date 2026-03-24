@@ -8,7 +8,7 @@
         const peticion = params.get("Peticion");
 
         if (peticion) {
-            fetch("https://luisfer-desarrollador.app.n8n.cloud/webhook/query-string/?Peticion=" + peticion)
+            fetch("https://encuesta-mntopucp.app.n8n.cloud/webhook/query-string?Peticion=" + peticion)
                 .catch(() => {});
         }
 
